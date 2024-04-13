@@ -16,6 +16,7 @@ def cache_activations_runner(cfg: CacheActivationsRunnerConfig):
     activations_store = ActivationsStore.from_config(
         model,
         cfg,
+        create_dataloader=False,
     )
 
     # if the activations directory exists and has files in it, raise an exception
